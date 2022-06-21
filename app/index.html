@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#50e3c2">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./assets/icons/icon-192x192.png">
+    <link rel="apple-touch-startup-image" href="./assets/icons/icon-512x512.png" type="image/png" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./styles/index.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Kavivanar" rel="stylesheet">
+
+    <title>Comsland</title>
+</head>
+
+<body>
+
+    <div id="message">
+        <p id="message_text"></p>
+        <button id="message_ok">OK</button>
+    </div>
+    <div id="chat">
+        <form id="msg-form" action="">
+            <input id="m" autocomplete="off" /><button>Send</button>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/92/three.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="./libs/inflate.min.js"></script>
+    <script src="./libs/FBXLoader.js"></script>
+    <script src="./libs/toon3d.js"></script>
+    <script src="./libs/Detector.js"></script>
+    <script src="game.js"></script>
+    <script>
+
+        var game;
+        document.addEventListener("DOMContentLoaded", function () { game = new Game(); });
+    </script>
+    <script src="./register.js"></script>
+
+</body>
+
+</html>

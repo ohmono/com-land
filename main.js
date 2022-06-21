@@ -3,9 +3,9 @@ const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 
-app.use(express.static('../frontend/'));
+app.use(express.static('./app'));
 app.get('/', function (req, res) {
-	res.sendFile(__dirname + '../frontend/index.html');
+	res.sendFile(__dirname + './app/index.html');
 });
 
 io.sockets.on('connection', function (socket) {
@@ -44,9 +44,9 @@ io.sockets.on('connection', function (socket) {
 		io.to(data.id).emit('chat message', { id: socket.id, message: data.message });
 	})
 });
-
-http.listen(PORT = 2002, IP='192.168.30.99', function () {
-	console.log(`app listening on http://${IP}:${PORT}`);
+const PORT = process.env.PORT || 666;
+http.listen(PORT, function () {
+	console.log(`app listening on port = ${PORT}`);
 });
 
 setInterval(function () {

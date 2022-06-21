@@ -1,0 +1,28 @@
+{
+  "name": "com-land",
+  "version": "1.0.0",
+  "description": "Project created for the assignment Comunications II in the University of Antioquia with three js, socket io and express",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node main.js",
+    "serve:dev": "nodemon main.js"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohmono/com-land.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ohmono/com-land/issues"
+  },
+  "homepage": "https://github.com/ohmono/com-land#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
