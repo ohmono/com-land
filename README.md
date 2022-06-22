@@ -8,6 +8,9 @@ Project created for the assignment Comunications II in the University of Antioqu
 ## Running the app
 
 ```bash
+# install modules
+$ npm install
+
 # watch mode
 $ npm run serve
 

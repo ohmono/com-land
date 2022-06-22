@@ -415,7 +415,7 @@ THREE.FBXLoader = ( function () {
 
 				//const name = fileName.split('\\').pop().split('/').pop();
 				//fileName = `../images/${name}`;
-				
+
 				texture = this.textureLoader.load( fileName );
 
 			}
@@ -1288,7 +1288,7 @@ THREE.FBXLoader = ( function () {
 
 			for ( var ID in skeletons ) {
 				if (bindMatrices===undefined) bindMatrices = this.parsePoseNodes();
-				
+
 				var skeleton = skeletons[ ID ];
 
 				var parents = connections.get( parseInt( skeleton.ID ) ).parents;
@@ -3188,7 +3188,7 @@ THREE.FBXLoader = ( function () {
 
 			var version = reader.getUint32();
 
-			console.log( 'THREE.FBXLoader: FBX binary version: ' + version );
+			// console.log( 'THREE.FBXLoader: FBX binary version: ' + version );
 
 			var allNodes = new FBXTree();
 

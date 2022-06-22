@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
 io.sockets.on('connection', function (socket) {
 	socket.userData = { x: 0, y: 0, z: 0, heading: 0 };//Default values;
 
-	console.log(`${socket.id} connected`);
+	// console.log(`${socket.id} connected`);
 	socket.emit('setId', { id: socket.id });
 
 	socket.on('disconnect', function () {
@@ -19,7 +19,7 @@ io.sockets.on('connection', function (socket) {
 	});
 
 	socket.on('init', function (data) {
-		console.log(`socket.init ${data.model}`);
+		// console.log(`socket.init ${data.model}`);
 		socket.userData.model = data.model;
 		socket.userData.colour = data.colour;
 		socket.userData.x = data.x;
@@ -40,7 +40,7 @@ io.sockets.on('connection', function (socket) {
 	});
 
 	socket.on('chat message', function (data) {
-		console.log(`chat message:${data.id} ${data.message}`);
+		//console.log(`chat message:${data.id} ${data.message}`);
 		io.to(data.id).emit('chat message', { id: socket.id, message: data.message });
 	})
 });
